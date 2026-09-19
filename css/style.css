@@ -4,6 +4,12 @@ body {
     color: #222;
     line-height: 1.5;
     margin: 0;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr 300px;
+    grid-template-areas: "header header"
+                        "sidebar main"
+                        "footer footer";
 }
 
 h1 {
@@ -87,11 +93,24 @@ footer {
 }
 
 main {
-    margin: 20px;
+    grid-area: main;
+    background-color: lightcyan;
+    padding: 20px 10px;
+    
+}
+header {
+    grid-area: header;
+    padding: 10px;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: lightblue;
+    padding: 10px;
 }
 
 footer {
-    margin-top: 30px;
+    grid-area: footer;
     padding: 20px;
     background-color: #222;
     color: white;
