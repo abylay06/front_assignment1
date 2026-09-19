@@ -163,6 +163,12 @@ table th {
     border-radius: 10%;
 }
 
+.team-card button {
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 10%;
+}
+
 .team-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
