@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Testimonials</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header id="main-header">
         <nav class="nav-menu">
-            <img src="images/finwise.png" height="30px" width="30px" alt="Logo"> 
+            <img src="images/finwise.png" height="30px" width="30px" alt="Logo">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -22,7 +21,7 @@
     </header>
 
     <aside>
-        <p>Passive income is true wealth ~ Robert Kiyosaki</p>
+        <p> Passive income is true wealth ~ Robert Kiyosaki</p>
         <p>Don't work for money, make your money work for you ~ Rockefeller</p>
         <p>Corruption is only good if I am part of it ~ Nigerian politician</p>
         <p>The best investment you can make is in yourself ~ Warren Buffett</p>
@@ -35,58 +34,53 @@
     </aside>
 
     <main>
-        <h1>About FinWise</h1>
-        <h3>Welcome to FinWise. We provide simple, personalized financial guidance for your future</h3>
-        <img class="feature-img"
-            src="https://avatars.mds.yandex.net/i?id=8b817e88d62b2d9f1b4f4e6c6a44d81b0a93abeb-4809743-images-thumbs&n=13"
-            alt="FinWise office building">
+        <h1>What Our Clients Say</h1>
+        <img class="feature-img" 
+            src="https://avatars.mds.yandex.net/i?id=c62ed9b1d63f85a0477176042c227f009c45d0d3-12542244-images-thumbs&n=13"
+            alt="Happy Clients">
 
-        <section class="card">
-            <h2>Our mission</h2>
-            <p>To provide clear and accessible financial guidance that helps people make confident decisions about their
-            future</p>
-        </section>
-
-        <section class="card highlight">  
-            <h2>Our Values</h2>
-            <ul>
-                <li>Trust</li>
-                <li>Transparency</li>
-                <li>Personalization</li>
-            </ul>
-        </section>
-
-        <h2>Meet Our Team</h2>
-        <section id=team-cards>
+        <section id="team-cards">
             <div class="team-card">
-                <img class="profile-img"
-                 src="images/Amir_K.jpg"
-                 alt="Amir K. profile">
-                <h3>Amir K.</h3>
-                <p>Co-founder & Financial Strategist</p>
-                <button>Buy</button>
-            </div>
-    
-            <div class="team-card">
-                <img class="profile-img"
-                 src="images/Abylay_A.jpg"
-                 alt="Abylay A. profile">
-                <h3>Abylay A.</h3>
-                <p>Co-founder & Wealth Management Expert</p>
-                <button>Buy</button>
+                <img src="images/rich.png" alt="Alex" class="profile-img">
+                <h4>Alex M.</h4>
+                <p>"FinWise helped me understand my financial goals and create a clear plan."</p>
+                <button>Read More</button>
             </div>
 
             <div class="team-card">
-                <img class="profile-img" src="images/rich.png" alt="John Doe profile">
-                <h3>John Doe</h3>
-                <p>Senior Financial Analyst</p>
-                <button>Buy</button>
+                <img src="images/rich.png" alt="Maria" class="profile-img">
+                <h4>Maria K.</h4>
+                <p>"The advice was simple, clear, and easy to understand."</p>
+                <button>Read More</button>
+            </div>
+
+            <div class="team-card">
+                <img src="images/rich.png" alt="Daniel" class="profile-img">
+                <h4>Daniel R.</h4>
+                <p>"I feel much more confident about planning for my future."</p>
+                <button>Read More</button>
             </div>
         </section>
+
+        <h2>Submit your testimonials</h2>
+        <form id="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="email" name="email" placeholder="Enter email" required>
+            
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option>Excellent</option>
+                <option>Good</option>
+                <option>Average</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your review" required></textarea>
+
+            <button class="main-button">Submit</button>
+        </form>
     </main>
-
     <footer>
-        <p>FinWise — Helping you plan for a better financial future.</p>
         <p>Group members:</p>
         <ul>
             <li>Amir K.</li>
@@ -95,5 +89,4 @@
     </footer>
 
 </body>
-
 </html>
