@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+
+            h1, p {
+                font-size: small;
+            }
+
+            .card {
+                height: 100px;
+                width: 100%;
+                border: 1px black solid;
+            }
+
+            @media (min-width: 768px){
+                h1, p {
+                    font-size: medium;
+                }
+                .card {
+                    width: calc(50% - 10px);
+                }
+            }
+            @media (min-width: 992px) {
+                h1, p {
+                    font-size: large;
+                }
+                .card {
+                    width: calc(33% - 10px);
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            This is a simple site
+        </h1>
+        <p> This is a paragraph that will have different
+            size for different screens. The heading on top
+            will also have different sizes
+        </p>
+
+
+
+        <div style="display:flex; flex-wrap: wrap; gap: 10px">
+            <div class="card">
+                <h2>Card1</h2>
+            </div>
+            <div class="card">
+                <h2>Card2</h2>
+            </div>
+            <div class="card">
+                <h2>Card3</h2>
+            </div>
+
+        </div>
+    </body>
+</html>
