@@ -10,7 +10,7 @@
 <body>
     <header id="main-header">
         <nav class="nav-menu">
-            <img src="images/finwise.png" height="30px" width="30px">
+            <img src="images/finwise.png" height="30px" width="30px" alt="Logo">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -35,24 +35,31 @@
 
     <main>
         <h1>What Our Clients Say</h1>
-
         <img class="feature-img" 
             src="https://avatars.mds.yandex.net/i?id=c62ed9b1d63f85a0477176042c227f009c45d0d3-12542244-images-thumbs&n=13"
             alt="Happy Clients">
 
-        <section class="card">
-            <p>"FinWise helped me understand my financial goals and create a clear plan"</p>
-            <h4>- Alex M.</h4>
-        </section>
+        <section id="team-cards">
+            <div class="team-card">
+                <img src="images/Alex.jpeg" alt="Alex" class="profile-img">
+                <h4>Alex M.</h4>
+                <p>"FinWise helped me understand my financial goals and create a clear plan."</p>
+                <button>Read More</button>
+            </div>
 
-        <section class="card">
-            <p>"The advice was simple, clear, and easy to understand"</p>
-            <h4>- Maria K.</h4>
-        </section>
+            <div class="team-card">
+                <img src="images/Maria.jpeg" alt="Maria" class="profile-img">
+                <h4>Maria K.</h4>
+                <p>"The advice was simple, clear, and easy to understand."</p>
+                <button>Read More</button>
+            </div>
 
-        <section class="card">
-            <p>"I feel much more confident about planning for my future"</p>        
-            <h4>- Daniel R.</h4>
+            <div class="team-card">
+                <img src="images/Daniel.jpeg" alt="Daniel" class="profile-img">
+                <h4>Daniel R.</h4>
+                <p>"I feel much more confident about planning for my future."</p>
+                <button>Read More</button>
+            </div>
         </section>
 
         <h2>Submit your testimonials</h2>
@@ -70,7 +77,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Your review" required></textarea>
 
-            <button>Submit</button>
+            <button class="main-button">Submit</button>
         </form>
     </main>
     <footer>
