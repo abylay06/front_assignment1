@@ -3,7 +3,6 @@ body {
     background-color: #f5f5f5;
     color: #222;
     line-height: 1.5;
-    margin: 0;
     display: grid;
     grid-template-columns: 200px 1fr ;
     grid-template-rows: 60px 1fr 300px;
@@ -27,35 +26,12 @@ p {
 
 #main-header {
     background-color: #222;
-    padding: 15px;
-}
-.nav-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.nav-menu ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-menu a:hover {
-    color: lightblue;
-}
 
 .card {
     background-color: white;
     border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
     width: 70%;
 }
 
@@ -66,9 +42,7 @@ p {
 
 #team {
     background-color: white;
-    margin: 20px;
     gap: 20px;
-    padding: 10px;
 }
 
 
@@ -95,37 +69,31 @@ footer {
 main {
     grid-area: main;
     background-color: lightcyan;
-    padding: 20px 10px;
     
 }
 header {
     grid-area: header;
-    padding: 10px;
 }
 
 aside {
     grid-area: sidebar;
     background-color: lightblue;
-    padding: 10px;
 }
 
 footer {
     grid-area: footer;
-    padding: 20px;
     background-color: #222;
     color: white;
 }
 
 table {
     border-collapse: collapse;
-    margin: 20px;
     background-color: white;
 }
 
 table th,
 table td {
     border: 1px solid #999;
-    padding: 10px;
 }
 
 table th {
@@ -136,8 +104,6 @@ table th {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: 20px;
     background-color: white;
     border: 1px solid #ccc;
 }
@@ -146,16 +112,12 @@ table th {
 #contact-form textarea,
 #contact-form select {
     width: 250px;
-    padding: 8px;
-    margin: 5px;
     border: 1px solid #aaa;
 }
 
 
 #contact-form button,
 .main-button {
-    padding: 10px 20px;
-    margin: 10px;
     border: none;
     background-color: #222;
     color: white;
@@ -170,13 +132,11 @@ table th {
 #team-cards {
     display: flex;
     flex-direction: row-reverse;
-    padding: 10px;
     gap: 10px;
 }
 
 
 .team-card {
-    padding: 10px;
     border: 1px solid grey;
     flex: 1;
     transition: 0.2s;
@@ -185,7 +145,6 @@ table th {
 
 .team-card button {
     width: 100px;
-    padding: 10px 20px;
     border-radius: 10%;
 }
 
@@ -196,8 +155,7 @@ table th {
 
 #gallery {
     display: grid;
-    margin: 10px;
-    padding: 10px;
+
     background-color: lightgoldenrodyellow;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
