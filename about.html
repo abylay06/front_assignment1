@@ -1,99 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - Finwise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<body class="bg-light">
 
-<body>
-    <header id="main-header">
-        <nav class="nav-menu">
-            <img src="images/finwise.png" height="30px" width="30px" alt="Logo"> 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <aside>
-        <p>Passive income is true wealth ~ Robert Kiyosaki</p>
-        <p>Don't work for money, make your money work for you ~ Rockefeller</p>
-        <p>Corruption is only good if I am part of it ~ Nigerian politician</p>
-        <p>The best investment you can make is in yourself ~ Warren Buffett</p>
-        <p>Price is what you pay. Value is what you get ~ Warren Buffett</p>
-        <p>Someone's sitting in the shade today because someone planted a tree a long time ago ~ Warren Buffett</p>
-        <p>Formal education will make you a living; self-education will make you a fortune ~ Jim Rohn</p>
-        <p>Money is a terrible master but an excellent servant ~ P. T. Barnum</p>
-        <p>Opportunities don't happen. You create them ~ Chris Grosser</p>
-        <p>It's not about having money. It's about having options ~ Chris Rock</p>
-    </aside>
-
-    <main>
-        <h1>About FinWise</h1>
-        <h3>Welcome to FinWise. We provide simple, personalized financial guidance for your future</h3>
-        <img class="feature-img"
-            src="https://avatars.mds.yandex.net/i?id=8b817e88d62b2d9f1b4f4e6c6a44d81b0a93abeb-4809743-images-thumbs&n=13"
-            alt="FinWise office building">
-
-        <section class="card">
-            <h2>Our mission</h2>
-            <p>To provide clear and accessible financial guidance that helps people make confident decisions about their
-            future</p>
-        </section>
-
-        <section class="card highlight">  
-            <h2>Our Values</h2>
-            <ul>
-                <li>Trust</li>
-                <li>Transparency</li>
-                <li>Personalization</li>
-            </ul>
-        </section>
-
-        <h2>Meet Our Team</h2>
-        <section id=team-cards>
-            <div class="team-card">
-                <img class="profile-img"
-                 src="images/Amir_K.jpg"
-                 alt="Amir K. profile">
-                <h3>Amir K.</h3>
-                <p>Co-founder & Financial Strategist</p>
-                <button>Buy</button>
-            </div>
-    
-            <div class="team-card">
-                <img class="profile-img"
-                 src="images/Abylay_A.jpg"
-                 alt="Abylay A. profile">
-                <h3>Abylay A.</h3>
-                <p>Co-founder & Wealth Management Expert</p>
-                <button>Buy</button>
-            </div>
-
-            <div class="team-card">
-                <img class="profile-img" src="images/rich.png" alt="John Doe profile">
-                <h3>Mr Money</h3>
-                <p>Senior Financial Analyst</p>
-                <button>Buy</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>FinWise — Helping you plan for a better financial future.</p>
-        <p>Group members:</p>
-        <ul>
-            <li>Amir K.</li>
-            <li>Abylay A.</li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand fw-bold" href="index.html">Finwise</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
         </ul>
-    </footer>
+    </div>
+</nav>
 
+<main class="container py-5 px-sm-2">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold display-5">About FinWise</h1>
+        <p class="lead text-secondary">We provide simple, personalized financial guidance for your future.</p>
+        <img src="https://avatars.mds.yandex.net/i?id=8b817e88d62b2d9f1b4f4e6c6a44d81b0a93abeb-4809743-images-thumbs&n=13" class="img-fluid rounded shadow-sm mt-3" style="max-width: 700px;" alt="FinWise Office">
+    </div>
+
+    <section class="row g-4 mb-5">
+        <div class="col-sm-12 col-md-6">
+            <div class="bg-white border rounded p-4 h-100 shadow-sm">
+                <h2 class="text-primary">Our Mission</h2>
+                <p>To provide clear and accessible financial guidance that helps people make confident decisions about their future.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="bg-primary text-white border rounded p-4 h-100 shadow-sm">
+                <h2>Our Values</h2>
+                <ul class="fs-5">
+                    <li>Trust</li>
+                    <li>Transparency</li>
+                    <li>Personalization</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="text-center mb-4">Meet Our Team</h2>
+    
+    <section class="row g-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body">
+                    <img src="images/Amir_K.jpg" class="rounded-circle mb-3 border" width="120" height="120" style="object-fit: cover;" alt="Amir K.">
+                    <h5 class="card-title">Amir K.</h5>
+                    <p class="card-text text-secondary">Co-founder & Financial Strategist</p>
+                    <button class="btn btn-outline-primary btn-sm px-4">Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body">
+                    <img src="images/Abylay_A.jpg" class="rounded-circle mb-3 border" width="120" height="120" style="object-fit: cover;" alt="Abylay A.">
+                    <h5 class="card-title">Abylay A.</h5>
+                    <p class="card-text text-secondary">Co-founder & Wealth Management Expert</p>
+                    <button class="btn btn-outline-primary btn-sm px-4">Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body">
+                    <img src="images/rich.png" class="rounded-circle mb-3 border" width="120" height="120" style="object-fit: cover;" alt="Mr Money">
+                    <h5 class="card-title">Mr Money</h5>
+                    <p class="card-text text-secondary">Senior Financial Analyst</p>
+                    <button class="btn btn-outline-primary btn-sm px-4">Contact</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+    <p class="mb-0">FinWise — Helping you plan for a better financial future.</p>
+    <p class="mb-0 text-secondary">Group members: Amir K. | Abylay A.</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
