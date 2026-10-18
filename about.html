@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Us - Finwise</title>
+    <title>Testimonials - Finwise</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #popup.open {
+            display: flex;
+        }
+        #popup-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+    </style>
 </head>
 <body class="bg-light">
 
@@ -17,48 +38,26 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="testimonials.html">Testimonials</a></li>
         </ul>
     </div>
 </nav>
 
 <main class="container py-5 px-sm-2">
-    <div class="text-center mb-5">
-        <h1 class="fw-bold display-5">About FinWise</h1>
-        <p class="lead text-secondary">We provide simple, personalized financial guidance for your future.</p>
-        <img src="https://avatars.mds.yandex.net/i?id=8b817e88d62b2d9f1b4f4e6c6a44d81b0a93abeb-4809743-images-thumbs&n=13" class="img-fluid rounded shadow-sm mt-3" style="max-width: 700px;" alt="FinWise Office">
-    </div>
+    <header class="text-center mb-5">
+        <h1 class="fw-bold display-5">What Our Clients Say</h1>
+        <p class="text-secondary">Read the success stories from our community.</p>
+    </header>
 
     <section class="row g-4 mb-5">
-        <div class="col-sm-12 col-md-6">
-            <div class="bg-white border rounded p-4 h-100 shadow-sm">
-                <h2 class="text-primary">Our Mission</h2>
-                <p>To provide clear and accessible financial guidance that helps people make confident decisions about their future.</p>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <div class="bg-primary text-white border rounded p-4 h-100 shadow-sm">
-                <h2>Our Values</h2>
-                <ul class="fs-5">
-                    <li>Trust</li>
-                    <li>Transparency</li>
-                    <li>Personalization</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <h2 class="text-center mb-4">Meet Our Team</h2>
-    
-    <section class="row g-4">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm text-center">
                 <div class="card-body">
-                    <img src="images/Amir_K.jpg" class="rounded-circle mb-3 border" width="120" height="120" style="object-fit: cover;" alt="Amir K.">
-                    <h5 class="card-title">Amir K.</h5>
-                    <p class="card-text text-secondary">Co-founder & Financial Strategist</p>
-                    <button class="btn btn-outline-primary btn-sm px-4">Contact</button>
+                    <img src="images/Alex.jpeg" class="rounded-circle mb-3 shadow-sm border" style="width: 100px; height: 100px; object-fit: cover;" alt="Alex M.">
+                    <h4 class="card-title">Alex M.</h4>
+                    <p class="card-text fst-italic">"FinWise helped me understand my financial goals and create a clear plan."</p>
+                    <button class="btn btn-primary btn-sm mt-2">Read Full Story</button>
                 </div>
             </div>
         </div>
@@ -66,10 +65,10 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm text-center">
                 <div class="card-body">
-                    <img src="images/Abylay_A.jpg" class="rounded-circle mb-3 border" width="120" height="120" style="object-fit: cover;" alt="Abylay A.">
-                    <h5 class="card-title">Abylay A.</h5>
-                    <p class="card-text text-secondary">Co-founder & Wealth Management Expert</p>
-                    <button class="btn btn-outline-primary btn-sm px-4">Contact</button>
+                    <img src="images/Maria.jpeg" class="rounded-circle mb-3 shadow-sm border" style="width: 100px; height: 100px; object-fit: cover;" alt="Maria K.">
+                    <h4 class="card-title">Maria K.</h4>
+                    <p class="card-text fst-italic">"The advice was simple, clear, and easy to understand."</p>
+                    <button class="btn btn-primary btn-sm mt-2">Read Full Story</button>
                 </div>
             </div>
         </div>
@@ -77,21 +76,86 @@
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm text-center">
                 <div class="card-body">
-                    <img src="images/rich.png" class="rounded-circle mb-3 border" width="120" height="120" style="object-fit: cover;" alt="Mr Money">
-                    <h5 class="card-title">Mr Money</h5>
-                    <p class="card-text text-secondary">Senior Financial Analyst</p>
-                    <button class="btn btn-outline-primary btn-sm px-4">Contact</button>
+                    <img src="images/Daniel.jpeg" class="rounded-circle mb-3 shadow-sm border" style="width: 100px; height: 100px; object-fit: cover;" alt="Daniel R.">
+                    <h4 class="card-title">Daniel R.</h4>
+                    <p class="card-text fst-italic">"I feel much more confident about planning for my future."</p>
+                    <button class="btn btn-primary btn-sm mt-2">Read Full Story</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="row justify-content-center">
+        <div class="col-lg-8">
+            <form id="validationForm" class="bg-white border rounded shadow-sm p-4" novalidate>
+                <h2 class="mb-4 text-center">Submit Your Testimonial</h2>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="password" class="form-label">Account Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Min 8 characters">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Repeat password">
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="form-label">Message (Optional)</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your review"></textarea>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="reset" class="btn btn-outline-secondary me-md-2">Clear Form</button>
+                    <button type="submit" class="btn btn-success px-5">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <button id="subscribe-btn" class="btn btn-primary my-4">
+        Subscribe to Newsletter
+    </button>
+
+    <div id="popup">
+        <div id="popup-content">
+            <button id="close-btn" type="button">✕</button>
+            <h3>Subscribe to Newsletter</h3>
+
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <button id="color-btn" class="btn btn-primary my-4">
+        Change Background
+    </button>
+   
+    <div class="text-center my-4">
+        <h5>Current Date and Time</h5>
+        <p id="datetime"></p>
+    </div>
 </main>
 
 <footer class="bg-dark text-white text-center p-3 mt-5">
     <p class="mb-0">Group members: Amir K. | Abylay A.</p>
 </footer>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
