@@ -68,7 +68,7 @@ for (let i = 0; i < faqQuestions.length; i++) {
             if(icon) icon.textContent = '+';
         } else {
             answer.classList.add('open');
-            if(icon) icon.textContent = '−';
+            if(icon) icon.textContent = '-';
         }
     });
 }
