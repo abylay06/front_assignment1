@@ -11,7 +11,7 @@ if (servicesForm) {
         
         let errors = [];
 
-        if (name === "") errors.push("Name is required.");
+        if (!/^[A-Za-z ]+$/.test(name)) {errors.push("Enter a name using letters and spaces.");}
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Enter a valid email address.");
         if (service === "") errors.push("Please select a service.");
         if (!contact) errors.push("Please choose a contact method.");
@@ -58,6 +58,31 @@ if (sponsorsBtn && sponsors) {
     sponsorsBtn.addEventListener("click", () => sponsors.classList.toggle("open"));
 }
 
+const timeBtn = document.getElementById("time-btn");
+const timeSection = document.getElementById("time-section");
+
+if (timeBtn && timeSection){
+    timeBtn.addEventListener("click", ()=>{
+        if (timeSection.classList.contains("show")){
+            timeSection.classList.remove("show");
+            timeBtn.textContent = "Show time";
+        }
+        else {
+            timeSection.classList.add("show");
+            timeBtn.textContent = "Hide time";
+        }
+    })
+}
+
+const optimusPrime = document.getElementById("optimus-prime")
+
+if (optimusPrime){
+    optimusPrime.addEventListener("click", ()=>{
+        optimusPrime.classList.toggle("upper");
+    })
+}
+
+
 const faqQuestions = document.querySelectorAll('.faq-question');
 for (let i = 0; i < faqQuestions.length; i++) {
     faqQuestions[i].addEventListener('click', function() {
@@ -72,6 +97,24 @@ for (let i = 0; i < faqQuestions.length; i++) {
         }
     });
 }
+
+const toggleAll = document.getElementById("toggle-all")
+const answers = document.getElementsByClassName("faq-answer")
+
+if (toggleAll && answers)
+    toggleAll.addEventListener("click", function(){
+
+        for (let i = 0; i < answers.length; i++){
+            if(answers[i].classList.contains("open")){
+                answers[i].classList.remove("open");
+                toggleAll.textContent = "+";
+            }
+            else {
+                answers[i].classList.add("open");
+                toggleAll.textContent = "-";
+            }
+        }
+})
 
 const subscribeBtn = document.getElementById("subscribe-btn");
 const closeBtn = document.getElementById("close-btn");
@@ -116,4 +159,104 @@ if (datetime) {
     }
     updateTime();
     setInterval(updateTime, 1000);
+}
+
+const links = document.querySelectorAll("#links a")
+
+if (links){
+    for (let i = 0; i < links.length; i++){
+        links[i].addEventListener("keydown", (event)=>{
+            if (event.key==="ArrowRight"){
+                links[(i+1) % links.length].focus();
+            }
+            else if (event.key==="ArrowLeft"){
+                links[(i-1 + links.length) % links.length].focus();
+            }
+        })
+    }
+}
+
+const formSteps = Array.from(document.getElementsByClassName("form-step"))
+const fromStepBack = document.getElementById("form-step-back")
+const fromStepNext = document.getElementById("form-step-next")
+
+if (formSteps && fromStepBack && fromStepNext){
+    let currentActive = 0;
+    
+    function showCurrent(){
+        formSteps.forEach((form, i) => {
+            form.hidden = currentActive != i;
+        })
+    }
+    fromStepBack.addEventListener("click", (event)=>{
+        event.preventDefault();
+        if (currentActive > 0){
+            currentActive--;
+            showCurrent();
+        }
+    })
+    fromStepNext.addEventListener("click", (event)=>{
+        event.preventDefault();
+        if (currentActive < formSteps.length - 1){
+            currentActive++;
+            showCurrent();
+        }
+    })
+
+}
+
+const extraServices = Array.from(document.getElementsByClassName("extra-service"))
+const extraServiceSelect = document.getElementById("extra-service-select")
+
+if (extraServices && extraServiceSelect){
+    function showService(targetIndex){
+        extraServices.forEach((service, i )=> {
+            service.hidden = i != targetIndex
+        })
+    }
+    extraServiceSelect.addEventListener("change", ()=>{
+        switch (extraServiceSelect.value){
+        case ("Manners"):
+            showService(0);
+            break;
+        case ("Literature"):
+            showService(1);
+            break;
+        case ("Golf"):
+            showService(2);
+            break;
+        default:
+            extraServices.forEach(service => service.hidden = false)
+        }
+    })
+    
+}
+
+const financeTips = {
+    tips: ["Track your spending.", "Save regularly.", "Plan before buying."],
+
+    show() {
+        const index = Math.floor(Math.random() * this.tips.length)
+        document.getElementById("finance-tip").textContent = this.tips[index]
+    }
+}
+
+const tipBtn = document.getElementById("tip-btn")
+
+if (tipBtn) {
+    tipBtn.addEventListener("click", () => {
+        financeTips.show()
+
+        const audio = new AudioContext()
+        const tone = audio.createOscillator()
+        const volume = audio.createGain()
+
+        volume.gain.value = 0.05
+        tone.connect(volume)
+        volume.connect(audio.destination)
+
+        tone.start();
+        tone.stop(audio.currentTime + 0.5)
+        tone.onended = () => audio.close()
+    })
 }

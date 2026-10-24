@@ -36,6 +36,18 @@
             width: 90%;
             max-width: 400px;
         }
+        #time-section {
+            max-height: 0px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        #time-section.show {
+            max-height: 200px;
+        }
+
+        #optimus-prime.upper {
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -50,7 +62,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
+        <ul id="links" class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -234,9 +246,42 @@
     </button>
    
     <div class="text-center my-4">
-        <h5>Current Date and Time</h5>
-        <p id="datetime"></p>
+        <button id="time-btn" class="btn btn-primary my-2">Show time</button>
+        <div id="time-section">
+            <h5>Current Date and Time</h5>
+            <p id="datetime"></p>
+        </div>
     </div>
+
+    <div class="text-center my-4">
+        <button class="btn btn-outline-warning btin-large" id="optimus-prime">optimus prime</button>
+    </div>
+
+    <div class="text-center my-4">
+        <form>
+            <div class="form-step">
+                <input type="text" placeholder="Favorite CEO...">
+            </div>
+            <div class="form-step" hidden>
+                <input type="text" placeholder="Target money...">
+            </div>
+            <div class="form-step" hidden>
+                <input type="text" placeholder="To buy...">
+            </div>
+
+            <button id="form-step-back">Back</button>
+            <button id="form-step-next">Next</button>
+
+            <button>submit</button>
+        </form>
+    </div>
+    <div class="text-center my-4">
+        <button type="button" id="tip-btn" class="btn btn-primary">
+            Financial tip 🔊
+        </button>
+        <p id="finance-tip"></p>
+    </div>
+    
 
 </main>
 
