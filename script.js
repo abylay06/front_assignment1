@@ -260,3 +260,67 @@ if (tipBtn) {
         tone.onended = () => audio.close()
     })
 }
+
+const greetingElement = document.getElementById("dynamic-greeting");
+if (greetingElement) {
+    const hour = new Date().getHours();
+    let greeting = hour < 12 ? "Good Morning!" : hour < 18 ? "Good Afternoon!" : "Good Evening!";
+    greetingElement.textContent = `${greeting} Welcome to FinWise.`;
+}
+
+const themeToggle = document.getElementById("theme-toggle");
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        themeToggle.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+        themeToggle.classList.toggle("btn-dark");
+        themeToggle.classList.toggle("btn-light");
+    });
+}
+
+const mainImage = document.getElementById("main-gallery-image");
+const thumbnails = document.querySelectorAll(".thumbnail");
+if (mainImage && thumbnails.length > 0) {
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener("click", function() {
+            mainImage.src = this.src;
+            thumbnails.forEach(t => t.style.opacity = "0.5");
+            this.style.opacity = "1";
+        });
+    });
+}
+
+const stars = document.querySelectorAll(".rating-star");
+if (stars.length > 0) {
+    stars.forEach((star, index) => {
+        star.addEventListener("click", () => {
+            stars.forEach((s, i) => {
+                if (i <= index) {
+                    s.classList.add("text-warning");
+                    s.classList.remove("text-secondary");
+                } else {
+                    s.classList.remove("text-warning");
+                    s.classList.add("text-secondary");
+                }
+            });
+        });
+    });
+}
+
+if (validationForm) {
+    validationForm.addEventListener("reset", function() {
+        for (let i = 0; i < stars.length; i++) {
+            stars[i].classList.remove("text-warning");
+            stars[i].classList.add("text-secondary");
+        }
+    });
+}
+
+if (colorBtn && themeToggle) {
+    colorBtn.addEventListener("click", function() {
+        document.body.classList.remove("dark-mode");
+        themeToggle.textContent = "Dark Mode";
+        themeToggle.classList.add("btn-dark");
+        themeToggle.classList.remove("btn-light");
+    });
+}
