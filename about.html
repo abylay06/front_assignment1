@@ -35,6 +35,10 @@
             width: 90%;
             max-width: 400px;
         }
+        body { transition: background-color 0.4s ease, color 0.4s ease; }
+        body.dark-mode { background-color: #121212 !important; color: #f8f9fa !important; }
+        body.dark-mode .bg-white, body.dark-mode .card, body.dark-mode #popup-content { background-color: #1e1e1e !important; color: #f8f9fa !important; border-color: #333 !important; }
+        body.dark-mode .text-primary { color: #66b2ff !important; }
     </style>
 </head>
 <body class="bg-light">
@@ -45,21 +49,35 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
+        <ul id="links" class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
         </ul>
+        <button id="theme-toggle" class="btn btn-dark btn-sm ms-3">Dark Mode</button>
     </div>
 </nav>
 
 <main class="container py-5 px-sm-2">
     <div class="text-center mb-5">
         <h1 class="fw-bold display-5">About FinWise</h1>
-        <p class="lead text-secondary">We provide simple, personalized financial guidance for your future.</p>
+        <h3 id="dynamic-greeting" class="text-primary mt-2"></h3>
+        <p class="lead text-secondary mt-3">We provide simple, personalized financial guidance for your future.</p>
         <img src="https://avatars.mds.yandex.net/i?id=8b817e88d62b2d9f1b4f4e6c6a44d81b0a93abeb-4809743-images-thumbs&n=13" class="img-fluid rounded shadow-sm mt-3" style="max-width: 700px; width: 100%;" alt="FinWise Office">
     </div>
+
+    <section class="mt-5 mb-5 p-4 border rounded bg-white shadow-sm">
+        <h2 class="text-center mb-4">Our Office Gallery</h2>
+        <div class="text-center">
+            <img id="main-gallery-image" src="https://picsum.photos/800/400?30" class="img-fluid rounded mb-3" style="height: 350px; width: 100%; object-fit: cover; transition: 0.3s;" alt="Main Gallery">
+            <div class="d-flex justify-content-center gap-3">
+                <img src="https://picsum.photos/800/400?30" class="thumbnail border rounded shadow-sm" style="width: 120px; height: 80px; object-fit: cover; cursor: pointer; opacity: 1;">
+                <img src="https://picsum.photos/800/400?31" class="thumbnail border rounded shadow-sm" style="width: 120px; height: 80px; object-fit: cover; cursor: pointer; opacity: 0.5;">
+                <img src="https://picsum.photos/800/400?32" class="thumbnail border rounded shadow-sm" style="width: 120px; height: 80px; object-fit: cover; cursor: pointer; opacity: 0.5;">
+            </div>
+        </div>
+    </section>
 
     <section class="row g-4 mb-5">
         <div class="col-sm-12 col-md-6">
@@ -78,8 +96,7 @@
                 </ul>
             </div>
         </div>
-    </se
-    ction>
+    </section>
 
     <h2 class="text-center mb-4">Meet Our Team</h2>
     
