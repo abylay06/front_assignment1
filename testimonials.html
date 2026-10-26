@@ -25,6 +25,9 @@
             width: 90%;
             max-width: 400px;
         }
+        body { transition: background-color 0.4s ease, color 0.4s ease; }
+        body.dark-mode { background-color: #121212 !important; color: #f8f9fa !important; }
+        body.dark-mode .bg-white, body.dark-mode .card, body.dark-mode #popup-content { background-color: #1e1e1e !important; color: #f8f9fa !important; border-color: #333 !important; }
     </style>
 </head>
 <body class="bg-light">
@@ -35,12 +38,13 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
+        <ul id="links" class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link active" href="testimonials.html">Testimonials</a></li>
         </ul>
+        <button id="theme-toggle" class="btn btn-dark btn-sm ms-3">Dark Mode</button>
     </div>
 </nav>
 
@@ -57,7 +61,6 @@
                     <img src="images/Alex.jpeg" class="rounded-circle mb-3 shadow-sm border" style="width: 100px; height: 100px; object-fit: cover;" alt="Alex M.">
                     <h4 class="card-title">Alex M.</h4>
                     <p class="card-text fst-italic">"FinWise helped me understand my financial goals and create a clear plan."</p>
-                    <button class="btn btn-primary btn-sm mt-2">Read Full Story</button>
                 </div>
             </div>
         </div>
@@ -68,7 +71,6 @@
                     <img src="images/Maria.jpeg" class="rounded-circle mb-3 shadow-sm border" style="width: 100px; height: 100px; object-fit: cover;" alt="Maria K.">
                     <h4 class="card-title">Maria K.</h4>
                     <p class="card-text fst-italic">"The advice was simple, clear, and easy to understand."</p>
-                    <button class="btn btn-primary btn-sm mt-2">Read Full Story</button>
                 </div>
             </div>
         </div>
@@ -79,7 +81,6 @@
                     <img src="images/Daniel.jpeg" class="rounded-circle mb-3 shadow-sm border" style="width: 100px; height: 100px; object-fit: cover;" alt="Daniel R.">
                     <h4 class="card-title">Daniel R.</h4>
                     <p class="card-text fst-italic">"I feel much more confident about planning for my future."</p>
-                    <button class="btn btn-primary btn-sm mt-2">Read Full Story</button>
                 </div>
             </div>
         </div>
@@ -89,6 +90,15 @@
         <div class="col-lg-8">
             <form id="validationForm" class="bg-white border rounded shadow-sm p-4" novalidate>
                 <h2 class="mb-4 text-center">Submit Your Testimonial</h2>
+
+                <div class="mb-4 text-center fs-2">
+                    <span class="rating-star text-secondary" style="cursor:pointer; transition: 0.2s;">★</span>
+                    <span class="rating-star text-secondary" style="cursor:pointer; transition: 0.2s;">★</span>
+                    <span class="rating-star text-secondary" style="cursor:pointer; transition: 0.2s;">★</span>
+                    <span class="rating-star text-secondary" style="cursor:pointer; transition: 0.2s;">★</span>
+                    <span class="rating-star text-secondary" style="cursor:pointer; transition: 0.2s;">★</span>
+                    <p class="fs-6 text-secondary mt-1 mb-0">Rate our service</p>
+                </div>
                 
                 <div class="row">
                     <div class="col-md-6 mb-3">
