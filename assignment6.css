@@ -1,6 +1,3 @@
-/* Assignment 6 enhancements; designed to complement existing Bootstrap pages. */
-
-/* Task 4: always visible scroll progress */
 #fw-scroll-progress {
     position: fixed;
     top: 0;
@@ -14,7 +11,6 @@
     transition: width 80ms linear;
 }
 
-/* Tasks 1-3: search input, autocomplete, highlighting */
 .fw-search-box {
     max-width: 760px;
     margin: 0 auto;
@@ -58,7 +54,6 @@ mark.fw-highlight {
     padding: 0 2px;
 }
 
-/* Task 5: counters */
 .fw-stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -80,7 +75,6 @@ mark.fw-highlight {
 }
 .fw-stat span { color: #4a596c; font-size: .92rem; }
 
-/* Task 7: temporary toast notifications */
 .fw-toast-stack {
     position: fixed;
     top: 25px;
@@ -102,7 +96,6 @@ mark.fw-highlight {
 }
 .fw-toast-error { background: #ba3030; }
 
-/* Task 8: copy text */
 .fw-copy-area {
     display: flex;
     flex-wrap: wrap;
@@ -118,7 +111,6 @@ mark.fw-highlight {
 }
 .fw-copy-status { min-width: 90px; color: #176c4e; font-size: .9rem; }
 
-/* Task 9: reserve space while lazy-loaded photos have no src. */
 #cards img[data-src], #cards img[src] {
     height: 200px;
     object-fit: cover;

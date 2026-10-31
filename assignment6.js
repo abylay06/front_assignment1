@@ -1,8 +1,7 @@
-// Assignment 6: jQuery features for the existing Finwise website.
 $(document).ready(function () {
-    console.log("jQuery is ready!"); // Task 0
+    console.log("jQuery is ready!"); 
 
-    // Task 7: reusable notification system.
+   
     const $toastStack = $('<div class="fw-toast-stack" aria-live="polite"></div>')
         .appendTo('body');
 
@@ -20,8 +19,7 @@ $(document).ready(function () {
 
     window.finwiseToast = showToast;
 
-    // Task 6: spinner + disabled submit button + simulated server response.
-    // Called only AFTER the original validation in script.js passes.
+   
     window.finwiseSubmit = function (form, successMessage) {
         const $form = $(form);
         const $button = $form.find('button[type="submit"]').first();
@@ -34,13 +32,13 @@ $(document).ready(function () {
         );
 
         setTimeout(function () {
-            form.reset(); // Demo only: no network request is sent.
+            form.reset(); 
             $button.html(originalHtml).prop('disabled', false);
             showToast(successMessage);
         }, 1500);
     };
 
-    // Task 4: colorful progress bar showing scroll position on every page.
+  
     const $progress = $('<div id="fw-scroll-progress" aria-hidden="true"></div>')
         .prependTo('body');
 
@@ -53,8 +51,7 @@ $(document).ready(function () {
     $(window).on('scroll resize load', updateProgress);
     updateProgress();
 
-    // Tasks 1, 2 and 3: live filter, autocomplete and search highlighting.
-    // Uses the original service cards; no duplicated content is needed.
+    
     if ($('#services-form').length) {
         const $services = $('main section.row.g-4').first();
         const $items = $services.children('div').has('.card h4');
@@ -81,7 +78,6 @@ $(document).ready(function () {
         const $results = $searchBox.find('#fw-results');
         let selectedSuggestion = -1;
 
-        // Remember text before highlighting so searches never accumulate <mark> tags.
         const $textElements = $items.find('h4, p');
         $textElements.each(function () {
             $(this).data('originalText', $(this).text());
@@ -162,7 +158,7 @@ $(document).ready(function () {
             showSuggestions(lowerQuery);
         });
 
-        // Keyboard support: Up/Down selects a suggestion, Enter applies it, Escape closes.
+   
         $search.on('keydown', function (event) {
             const $options = $suggestions.children('button');
             if (event.key === 'Escape') {
@@ -189,7 +185,6 @@ $(document).ready(function () {
         });
         $search.trigger('input');
 
-        // Task 7 example: a notification when an existing service is selected.
         $items.find('.card button').on('click', function () {
             const name = $(this).closest('.card').find('h4').text().trim();
             const $option = $('#service option').filter(function () {
@@ -201,7 +196,7 @@ $(document).ready(function () {
         });
     }
 
-    // Task 5: animated counters that describe real content on the Home page.
+  
     if ($('#cards').length) {
         const stats = [
             {value: $('#cards .card').length, label: 'Featured topics'},
@@ -237,7 +232,7 @@ $(document).ready(function () {
         $(window).on('scroll resize', animateCounters);
         animateCounters();
 
-        // Task 8: copy a useful finance snippet, show a checkmark and tooltip.
+
         const $copyArea = $(
             '<div class="fw-copy-area mt-3">' +
                 '<code id="fw-copy-text">Track your spending.</code>' +
@@ -282,14 +277,14 @@ $(document).ready(function () {
             }
         });
 
-        // Prevent the old practice-only multi-step form from reloading the site.
+      
         $('.form-step').first().closest('form').on('submit', function (event) {
             event.preventDefault();
             showToast('Demo form completed (nothing was sent to a server).');
         });
     }
 
-    // Task 9: jQuery loads image URLs only once images are near the viewport.
+   
     const $lazyImages = $('img[data-src]');
     function loadImage(image) {
         const $image = $(image);
@@ -320,7 +315,7 @@ $(document).ready(function () {
         loadVisible();
     }
 
-    // Bootstrap hides inactive carousel slides, so preload an image on slide change.
+    
     $('#carousel').on('slide.bs.carousel', function (event) {
         $(event.relatedTarget).find('img[data-src]').each(function () { loadImage(this); });
     });
